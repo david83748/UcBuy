@@ -1,7 +1,7 @@
-function ucCount(x) {
-    return (x / 60);
+function ucCount(ucCoin) {
+    return (ucCoin / 60);
   };
 
-function dollar (y) {
-    return (y * 27);    
+function dollar (dollarCoin) {
+    return (dollarCoin * 27);    
  };
