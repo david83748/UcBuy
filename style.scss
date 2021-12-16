@@ -1,0 +1,165 @@
+$main__color: #08088a;
+$general__color: #0b0b61;
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  background-color: $general__color;
+
+  .wrapper {
+    background-color: $main__color;
+    .header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .header__img {
+        width: 200px;
+        height: 200px;
+      }
+      .header__heading-general {
+        font-size: 90px;
+        color: #d7df01;
+      }
+      .header__heading-second {
+        font-size: 30px;
+      }
+    }
+    .main {
+      display: flex;
+      justify-content: space-around;
+
+      .calculator {
+        .calculator__block {
+          margin-bottom: 50%;
+
+          .calculator__container {
+            width: 80%;
+            background: $general__color;
+            padding: 10%;
+            box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 1);
+            .input__data {
+              height: 40px;
+              position: relative;
+              .label {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                color: blue;
+                pointer-events: none;
+                transition: all 0.3s ease;
+              }
+              .input__line {
+                height: 100%;
+                width: 100%;
+                border: none;
+                font-size: 17px;
+                color: white;
+                border-bottom: 2px solid black;
+                outline: none;
+                background-color: $general__color;
+              }
+              .input__line:valid ~ .label {
+                transform: translateY(-20px);
+                font-size: 15px;
+                color: white;
+              }
+              .input__line:focus ~ .label {
+                transform: translateY(-20px);
+                font-size: 15px;
+                color: white;
+              }
+            }
+          }
+          .calculator__result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            width: 350px;
+            height: 50px;
+            color: white;
+            box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 1);
+          }
+          .calculator__heading {
+            text-align: center;
+            font-size: 50px;
+            color: yellow;
+            background-color: black;
+            border-radius: 10px;
+          }
+        }
+      }
+      .information {
+        .information__heading {
+          background-color: yellow;
+          font-size: 45px;
+          border: 2px solid black;
+          padding: 5%;
+          border-radius: 3%;
+          margin-bottom: 3%;
+        }
+        .price__block {
+          display: flex;
+          .price {
+            .price__img {
+              width: 220px;
+              height: 180px;
+              border: 1px solid blue;
+              border-radius: 5px;
+              background-color: black;
+            }
+            .price__heading {
+              font-size: 30px;
+              border: 1px solid blue;
+              text-align: center;
+              color: yellow;
+              background-color: black;
+            }
+            .price__text {
+              border: 1px solid blue;
+              font-size: 24px;
+              text-align: right;
+              color: white;
+              background-color: black;
+              .btn__price {
+                font-size: 30px;
+                color: white;
+                background-color: blue;
+                margin-left: 2%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  .footer__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer__img {
+      width: 100px;
+      height: 100px;
+    }
+    .footer__text {
+      color: white;
+      font-size: 30px;
+      border-bottom: 3px solid white;
+    }
+    .footer__support {
+      width: 500px;
+      height: 100px;
+      border-radius: 25px;
+      background-color: $main__color;
+      a {
+        color: white;
+        font-size: 50px;
+        text-decoration: none;
+      }
+    }
+  }
+}
