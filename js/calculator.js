@@ -1,35 +1,41 @@
 function multiplication() {
-    
-    //const amount = document.getElementById('amount').value;
 
-    //const price = ucCount(amount);
-
-    const text = textMain(calculateTax()) ;
+    const text = textMain(calculateUc()) ;
 
     document.getElementById('resultt').innerHTML = text;
   };
 
-
-
-function textMain(price) {
-  return `${document.getElementById('amount').value} UC будет составлять ${price} $`
-};
-
-
-
-function calculateTax() {
-  const price = ucCount(document.getElementById('amount').value) ;
-  return price
-};
+  
+  function calculateUc() {
+    
+    const price = ucCount(document.getElementById('amount').value) ;
+    
+    return price
+    
+  };
+  
+  function textMain(price) {
+  
+    return `${document.getElementById('amount').value} UC будет составлять ${price} $`
+  };
 
 
 function trans() {
 
-    const syma = document.getElementById('syma').value
-    const rovno = dollar(syma);
-
-    const text = `${syma} $ это ${rovno} ГРН`;
+    const text = textDollar(calculateDollar());
 
     document.getElementById('resull').innerHTML = text;
 
+};
+
+function calculateDollar() {
+
+  const rovno = dollar(document.getElementById('syma').value) ;
+
+  return rovno
+};
+
+function textDollar(rovno) {
+
+  return `${document.getElementById('syma').value} $ это ${rovno} ГРН`
 };
