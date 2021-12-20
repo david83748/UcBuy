@@ -3,10 +3,52 @@
     const text = textFromUcToUsd(calculateUc()) ;
 
     document.getElementById('resultt').innerHTML = text;
-    if (calculateUc(amountItem()) <= 60) {
-      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0380.PNG" alt="special offer">')
+    if (amountItem() > 30) {
+      firstImg()
+    } else if (amountItem() > 60) { 
+      secondImg()
+    }  else if (amountItem() > 180) {
+      thirdImg()
     }
-  };
+
+
+      
+};
+
+
+function firstImg() {
+  const imgSps =  document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0380.PNG" alt="special offer">')
+
+  return imgSps
+};
+
+function secondImg() {
+  const imgSgs =  document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0381.PNG" alt="special offer">')
+
+  return imgSgs
+};
+function thirdImg() {
+  const imgSbs =  document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0384.PNG" alt="special offer">')
+
+  return imgSbs
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   function calculateUc() {
