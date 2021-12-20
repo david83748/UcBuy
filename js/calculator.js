@@ -1,6 +1,6 @@
-function multiplication() {
+  function onUCChange() {
 
-    const text = textMain(calculateUc()) ;
+    const text = textFromUcToUsd(calculateUc()) ;
 
     document.getElementById('resultt').innerHTML = text;
   };
@@ -8,21 +8,27 @@ function multiplication() {
   
   function calculateUc() {
     
-    const price = ucCount(document.getElementById('amount').value) ;
+    const price = ucCount(amountItem()) ;
     
     return price
     
   };
   
-  function textMain(price) {
+  function textFromUcToUsd(price) {
   
-    return `${document.getElementById('amount').value} UC будет составлять ${price} $`
+    return `${amountItem()} UC будет составлять ${price} $`
   };
 
+function amountItem() {
+  const elementUctext = document.getElementById('amount').value 
 
-function trans() {
+  return elementUctext
+};
 
-    const text = textDollar(calculateDollar());
+
+function onDollarChange() {
+
+    const text = textFromUsdToUah(calculateDollar());
 
     document.getElementById('resull').innerHTML = text;
 
@@ -30,12 +36,20 @@ function trans() {
 
 function calculateDollar() {
 
-  const rovno = dollar(document.getElementById('syma').value) ;
+  const rovno = dollar(symaItem()) ;
 
   return rovno
 };
 
-function textDollar(rovno) {
+function textFromUsdToUah(rovno) {
 
-  return `${document.getElementById('syma').value} $ это ${rovno} ГРН`
+  return `${symaItem()} $ это ${rovno} ГРН`
+};
+
+function symaItem() {
+
+  const elementDollarText = document.getElementById('syma').value 
+
+  return elementDollarText
+
 };
