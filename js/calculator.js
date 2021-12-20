@@ -1,17 +1,27 @@
 function multiplication() {
     
-    const amount = document.getElementById('amount').value;
+    //const amount = document.getElementById('amount').value;
 
-    const price = ucCount(amount);
+    //const price = ucCount(amount);
 
-    const text = `
-
-          ${amount} UC будет составлять ${price} $
-
-        `;
+    const text = textMain(calculateTax()) ;
 
     document.getElementById('resultt').innerHTML = text;
   };
+
+
+
+function textMain(price) {
+  return `${document.getElementById('amount').value} UC будет составлять ${price} $`
+};
+
+
+
+function calculateTax() {
+  const price = ucCount(document.getElementById('amount').value) ;
+  return price
+};
+
 
 function trans() {
 
