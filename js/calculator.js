@@ -3,6 +3,9 @@
     const text = textFromUcToUsd(calculateUc()) ;
 
     document.getElementById('resultt').innerHTML = text;
+    if (calculateUc(amountItem()) <= 60) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0380.PNG" alt="special offer">')
+    }
   };
 
   
@@ -53,3 +56,4 @@ function symaItem() {
   return elementDollarText
 
 };
+
