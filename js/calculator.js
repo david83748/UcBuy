@@ -25,6 +25,11 @@
     } else if (amountItem() <= 6000) {
       document.getElementById('offer').innerHTML = ('<img class="calculator__img-items" src="./imgs/IMG_0390.PNG" alt="special offers 6000">')
 
+
+      
+    }  else if (amountItem() <= 6000) {
+      document.getElementById('offer').innerHTML = ('<img class="calculator__img-items" src="./imgs/IMG_0390.PNG" alt="special offers 6000">')
+
     } 
     
 };
@@ -51,7 +56,7 @@ function amountItem() {
 
 function onDollarChange() {
 
-    const text = textFromUsdToUah(calculateDollar());
+    const text = textFromUsdToUah(symaItem(), calculateDollar());
 
     document.getElementById('resull').innerHTML = text;
 
@@ -60,18 +65,18 @@ function onDollarChange() {
 function calculateDollar() {
 
   const rovno = dollar(symaItem()) ;
-
+  
   return rovno
 };
 
-function textFromUsdToUah(rovno) {
+// function textFromUsdToUah(rovno) {
 
-  return `${symaItem()} $ это ${rovno} ГРН`
-};
-
-// function textFromUsdToUah(syma, rovno) {
-//   return `${syma} $ это ${rovno} ГРН`
+//   return `${symaItem()} $ это ${rovno} ГРН`
 // };
+
+function textFromUsdToUah(syma, rovno) {
+  return `${syma} $ это ${rovno} ГРН`
+};
 
 function symaItem() {
 
