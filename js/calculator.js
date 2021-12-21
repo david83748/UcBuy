@@ -3,35 +3,35 @@
     const text = textFromUcToUsd(calculateUc()) ;
 
     document.getElementById('resultt').innerHTML = text;
-    if (amountItem() > 30) {
-      firstImg()
-    } else if (amountItem() > 60) { 
-      secondImg()
-    }  else if (amountItem() > 180) {
-      thirdImg()
-    }
+    if (amountItem() < 60) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0380.PNG" alt="special offers 60">')
+    } else if (amountItem() <= 180) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0381.PNG" alt="special offers 180">')
+    } else if (amountItem() <= 300) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0384.PNG" alt="special offers 300">')
 
+    } else if (amountItem() <= 600) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0385.PNG" alt="special offers 600">')
+
+    } else if (amountItem() <= 900) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0385.PNG" alt="special offers 900">')
+
+    } else if (amountItem() <= 1500) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0387.PNG" alt="special offers 1500">')
+
+    } else if (amountItem() <= 3000) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0388.PNG" alt="special offers 3000">')
+
+    } else if (amountItem() <= 6000) {
+      document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0390.PNG" alt="special offers 6000">')
+
+    } 
+
+      
 
       
 };
 
-
-function firstImg() {
-  const imgSps =  document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0380.PNG" alt="special offer">')
-
-  return imgSps
-};
-
-function secondImg() {
-  const imgSgs =  document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0381.PNG" alt="special offer">')
-
-  return imgSgs
-};
-function thirdImg() {
-  const imgSbs =  document.getElementById('offer').innerHTML = ('<img src="./imgs/IMG_0384.PNG" alt="special offer">')
-
-  return imgSbs
-};
 
 
 
