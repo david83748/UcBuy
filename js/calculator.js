@@ -1,6 +1,6 @@
   function onUCChange() {
 
-    const text = textFromUcToUsd(calculateUc()) ;
+    const text = textFromUcToUsd(amountItem(), calculateUc()) ;
 
     document.getElementById('resultt').innerHTML = text;
     if (amountItem() < 60) {
@@ -24,13 +24,9 @@
 
     } else if (amountItem() <= 6000) {
       document.getElementById('offer').innerHTML = ('<img class="calculator__img-items" src="./imgs/IMG_0390.PNG" alt="special offers 6000">')
-
-
-      
-    }  else if (amountItem() <= 6000) {
-      document.getElementById('offer').innerHTML = ('<img class="calculator__img-items" src="./imgs/IMG_0390.PNG" alt="special offers 6000">')
-
-    } 
+    } else {
+      document.getElementById('offer').innerHTML = ('<img class="calculator__img-item" src="./imgs/IMG_0413.PNG" alt="you are the best">')
+    }
     
 };
   
@@ -42,12 +38,18 @@
     
   };
   
-  function textFromUcToUsd(price) {
+  // function textFromUcToUsd(price) {
   
-    return `${amountItem()} UC будет составлять ${price} $`
+  //   return `${amountItem()} UC будет составлять ${price} $`
+  // };
+  
+  function textFromUcToUsd(amount, price) {
+  
+    return `${amount} UC будет составлять ${price} $`
   };
 
 function amountItem() {
+
   const elementUctext = document.getElementById('amount').value 
 
   return elementUctext
@@ -75,6 +77,7 @@ function calculateDollar() {
 // };
 
 function textFromUsdToUah(syma, rovno) {
+
   return `${syma} $ это ${rovno} ГРН`
 };
 

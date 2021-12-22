@@ -123,6 +123,11 @@ body .wrapper .main .calculator .calculator__block .calculator__img .calculator_
           box-shadow: 3px 3px 10px yellow;
 }
 
+body .wrapper .main .calculator .calculator__block .calculator__img .calculator__img-item {
+  width: 350px;
+  height: 250px;
+}
+
 body .wrapper .main .calculator .calculator__block .calculator__heading {
   text-align: center;
   font-size: 50px;
@@ -196,6 +201,7 @@ body .wrapper .main .information .price__block .price .price__text .btn__price {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 1%;
 }
 
 .contact .footer__block .footer__img {
@@ -210,8 +216,8 @@ body .wrapper .main .information .price__block .price .price__text .btn__price {
 }
 
 .contact .footer__block .footer__support {
-  width: 500px;
-  height: 100px;
+  width: 380px;
+  height: 90px;
   border-radius: 25px;
   background-color: #08088a;
 }

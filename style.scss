@@ -88,6 +88,10 @@ body {
               height: 250px;
               box-shadow: 3px 3px 10px rgba($color: yellow, $alpha: 1);
             }
+            .calculator__img-item {
+              width: 350px;
+              height: 250px;
+            }
           }
           .calculator__heading {
             text-align: center;
@@ -150,6 +154,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1%;
     .footer__img {
       width: 100px;
       height: 100px;
@@ -160,8 +165,8 @@ body {
       border-bottom: 3px solid white;
     }
     .footer__support {
-      width: 500px;
-      height: 100px;
+      width: 380px;
+      height: 90px;
       border-radius: 25px;
       background-color: $main__color;
       a {
