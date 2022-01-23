@@ -1,0 +1,19 @@
+{
+  "name": "ucbuy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david83748/UcBuy.git"
+  },
+  "author": "David Vashchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/david83748/UcBuy/issues"
+  },
+  "homepage": "https://github.com/david83748/UcBuy#readme"
+}
